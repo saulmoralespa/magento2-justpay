@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright (c) 2019 Saul Morales Paccheco www.saulmoralespa.com
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <justpay_cash>
+                <active>0</active>
+                <title>Just Pay Cash</title>
+                <model>Saulmoralespa\JustPay\Model\Cash\Payment</model>
+                <payment_action>true</payment_action>
+                <allowspecific>0</allowspecific>
+                <group>offline</group>
+            </justpay_cash>
+            <justpay_online>
+                <active>0</active>
+                <title>Just Pay Online</title>
+                <model>Saulmoralespa\JustPay\Model\Online\Payment</model>
+                <payment_action>true</payment_action>
+                <allowspecific>0</allowspecific>
+                <group>offline</group>
+            </justpay_online>
+            <justpay_cards>
+                <active>0</active>
+                <title>Just Pay - Credit and Debit cards</title>
+                <model>Saulmoralespa\JustPay\Model\Cards\Payment</model>
+                <payment_action>true</payment_action>
+                <allowspecific>0</allowspecific>
+                <group>offline</group>
+            </justpay_cards>
+            <justpay>
+                <environment>1</environment>
+                <model>Saulmoralespa\JustPay\Model\JustPay</model>
+            </justpay>
+        </payment>
+    </default>
+</config>
