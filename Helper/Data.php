@@ -50,10 +50,10 @@ class Data extends \Magento\Payment\Helper\Data
         return (int)$this->scopeConfig->getValue('payment/justpay_cards/active', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
     }
 
-    public function log($message, $array = null)
+    public function log($message)
     {
-        if (!is_null($array))
-            $message .= " - " . json_encode($array);
+        if (is_array($message) || is_object($message))
+            $message = print_r($message, true);
 
         $this->_justPayLogger->debug($message);
     }

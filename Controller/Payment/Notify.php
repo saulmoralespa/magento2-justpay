@@ -10,8 +10,6 @@ class Notify extends \Magento\Framework\App\Action\Action
 {
     protected $_scopeConfig;
 
-    protected $_checkoutSession;
-
     protected $_justPayLogger;
 
     protected $_paymentHelper;
@@ -22,10 +20,15 @@ class Notify extends \Magento\Framework\App\Action\Action
 
     protected $_helperData;
 
+    protected $request;
+
+    protected $formKey;
+
     public function __construct(
         \Magento\Framework\App\Action\Context $context,
+        \Magento\Framework\Data\Form\FormKey $formKey,
+        \Magento\Framework\App\Request\Http $request,
         \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig,
-        \Magento\Checkout\Model\Session $checkoutSession,
         \Saulmoralespa\JustPay\Helper\Data $helperData,
         \Saulmoralespa\JustPay\Logger\Logger $justPayLogger,
         PaymentHelper $paymentHelper,
@@ -36,12 +39,14 @@ class Notify extends \Magento\Framework\App\Action\Action
         parent::__construct($context);
 
         $this->_scopeConfig = $scopeConfig;
-        $this->_checkoutSession = $checkoutSession;
         $this->_paymentHelper = $paymentHelper;
         $this->_transactionRepository = $transactionRepository;
         $this->_transactionBuilder = $transactionBuilder;
         $this->_justPayLogger = $justPayLogger;
         $this->_helperData = $helperData;
+        $this->request = $request;
+        $this->formKey = $formKey;
+        $this->request->setParam('form_key', $this->formKey->getFormKey());
     }
 
     public function execute()

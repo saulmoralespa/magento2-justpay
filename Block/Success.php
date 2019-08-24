@@ -8,7 +8,7 @@ class Success extends \Magento\Framework\View\Element\Template
 {
     public function getMessage()
     {
-        return __('An error has occurred while checking the payment status');
+        return __('Payment has been successfully received');
     }
 
     public function getUrlHome()

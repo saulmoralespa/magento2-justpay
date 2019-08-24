@@ -9,6 +9,8 @@
 "Notify URL","Notify URL",
 "We regret that you have decided to cancel the payment","We regret that you have decided to cancel the payment",
 "An error has occurred while checking the payment status","An error has occurred while checking the payment status",
+"An error has occurred during payment processing","An error has occurred during payment processing",
+"Payment has been successfully received","Payment has been successfully received",
 "invalid notification","invalid notification",
 "Payment approved","Payment approved",
 "Payment declined","Payment declined",
@@ -20,4 +22,8 @@
 "Order status when the payment is approved","Order status when the payment is approved",
 "Order status when the payment is rejected","Order status when the payment is rejected",
 "Just Pay: requires the fields are not empty","Just Pay: requires the fields are not empty",
-"Just Pay: payment finalized","Just Pay: payment finalized"
+"Just Pay: payment finalized","Just Pay: payment finalized",
+"Set to production if you are going to production Mode","Set to No if you are going to production Mode",
+"Public key, unique value that identifies the commerce","Public key, unique value that identifies the commerce",
+"Secure key, unique value that identifies the commerce","Secure key, unique value that identifies the commerce",
+"Specify endpoint URL","Specify endpoint URL"
