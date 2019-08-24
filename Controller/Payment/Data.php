@@ -74,11 +74,11 @@ class Data extends \Magento\Framework\App\Action\Action
             $channel = $this->getChannel($method);
             $amount = $this->_helperData->getAmount($order);
             $currency = $order->getOrderCurrencyCode();
-            $orderId = $order->getId();
-            $trans_id = $orderId . "_" . time();
+            $order_id = $order->getId();
+            $trans_id = $order_id . "_" . time();
             $time_expired = '120';
             $url_ok = $this->_url->getUrl('justpay/payment/success');
-            $url_error = $this->_url->getUrl('justpay/payment/error');
+            $url_error = $this->_url->getUrl('justpay/payment/error', ['order_id' => $order_id]);
             $url_finalizar = $this->_url->getUrl('justpay/payment/finalize');
 
             $data_sign = "$public_key$time$amount$currency$trans_id$time_expired$url_ok$url_error$channel$segure_key";

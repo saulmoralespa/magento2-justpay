@@ -26,4 +26,5 @@
 "Set to production if you are going to production Mode","Set to No if you are going to production Mode",
 "Public key, unique value that identifies the commerce","Public key, unique value that identifies the commerce",
 "Secure key, unique value that identifies the commerce","Secure key, unique value that identifies the commerce",
-"Specify endpoint URL","Specify endpoint URL"
+"Specify endpoint URL","Specify endpoint URL",
+"Click <a href="%1" target="_top">here</a> to continue shopping","Clic <a href="%1" target="_top">aquí</a> para seguir comprando"
