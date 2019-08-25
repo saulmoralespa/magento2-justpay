@@ -33,6 +33,7 @@
             </justpay_cards>
             <justpay>
                 <environment>1</environment>
+                <expiration_time>120</expiration_time>
                 <model>Saulmoralespa\JustPay\Model\JustPay</model>
             </justpay>
         </payment>

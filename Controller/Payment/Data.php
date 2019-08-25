@@ -76,7 +76,7 @@ class Data extends \Magento\Framework\App\Action\Action
             $currency = $order->getOrderCurrencyCode();
             $order_id = $order->getId();
             $trans_id = $order_id . "_" . time();
-            $time_expired = '120';
+            $time_expired = $this->_helperData->getExpirationTime();
             $url_ok = $this->_url->getUrl('justpay/payment/success');
             $url_error = $this->_url->getUrl('justpay/payment/error', ['order_id' => $order_id]);
             $url_finalizar = $this->_url->getUrl('justpay/payment/finalize');

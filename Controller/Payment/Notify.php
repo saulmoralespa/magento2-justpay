@@ -57,14 +57,14 @@ class Notify extends \Magento\Framework\App\Action\Action
             !$request->getParam('channel') ||
             !$request->getParam('currency') ||
             !$request->getParam('signature') ||
-            !$request->getParam('timme') ||
+            !$request->getParam('time') ||
             !$request->getParam('trans_ID'))
             exit;
 
         $public_key = $this->_helperData->getPublicKey();
         $secure_key = $this->_helperData->getSecureKey();
         $amount = $request->getParam('amount');
-        $time = $request->getParam('timme');
+        $time = $request->getParam('time');
         $currency = $request->getParam('currency');
         $trans_id = $request->getParam('trans_ID');
         $channel = $request->getParam('channel');

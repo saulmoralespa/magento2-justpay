@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <include xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_include.xsd">
-    <group id="states" translate="label" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+    <group id="states" translate="label" type="text" sortOrder="13" showInDefault="1" showInWebsite="1" showInStore="1">
         <label>State of the Order</label>
         <field id="pending" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="0">
             <label>Initial state of the order</label>

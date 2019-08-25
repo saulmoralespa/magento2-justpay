@@ -35,6 +35,11 @@ class Data extends \Magento\Payment\Helper\Data
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
     }
 
+    public function getExpirationTime()
+    {
+        return $this->scopeConfig->getValue('payment/justpay/expiration_time', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+    }
+
     public function getActiveCash()
     {
         return (int)$this->scopeConfig->getValue('payment/justpay_cash/active', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
@@ -48,14 +53,6 @@ class Data extends \Magento\Payment\Helper\Data
     public function getActiveCards()
     {
         return (int)$this->scopeConfig->getValue('payment/justpay_cards/active', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
-    }
-
-    public function log($message)
-    {
-        if (is_array($message) || is_object($message))
-            $message = print_r($message, true);
-
-        $this->_justPayLogger->debug($message);
     }
 
     public function getPublicKey()
@@ -110,5 +107,13 @@ class Data extends \Magento\Payment\Helper\Data
             'approved' => $this->scopeConfig->getValue('payment/justpay/approved', \Magento\Store\Model\ScopeInterface::SCOPE_STORE),
             'rejected' => $this->scopeConfig->getValue('payment/justpay/rejected', \Magento\Store\Model\ScopeInterface::SCOPE_STORE)
         ];
+    }
+
+    public function log($message)
+    {
+        if (is_array($message) || is_object($message))
+            $message = print_r($message, true);
+
+        $this->_justPayLogger->debug($message);
     }
 }

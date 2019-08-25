@@ -19,7 +19,13 @@
                     </depends>
                 </field>
 
-                <field id="notify_url" translate="label" sortOrder="7" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="expiration_time" translate="label" type="text" sortOrder="7" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Expiration time</label>
+                    <comment>The time allowed in minutes to generate transactions</comment>
+                    <validate>required-entry validate-number validate-greater-than-zero validate-number-range number-range-30-10000</validate>
+                </field>
+
+                <field id="notify_url" translate="label" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Notify URL</label>
                     <frontend_model>Saulmoralespa\JustPay\Block\Adminhtml\Form\Field\NotifyUrl</frontend_model>
                 </field>

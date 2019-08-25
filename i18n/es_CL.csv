@@ -25,4 +25,5 @@
 "Public key, unique value that identifies the commerce","Public key, valor único que identifica el comercio",
 "Secure key, unique value that identifies the commerce","Secure key, valor único que identifica el comercio",
 "Specify endpoint URL","Especificar endpoint URL",
-"Click <a href="%1" target="_top">here</a> to continue shopping","Clic <a href="%1" target="_top">aquí</a> para seguir comprando"
+"Click <a href="%1" target="_top">here</a> to continue shopping","Clic <a href="%1" target="_top">aquí</a> para seguir comprando",
+"The time allowed in minutes to generate transactions","El tiempo permitido en minutos para generar transacciones"
