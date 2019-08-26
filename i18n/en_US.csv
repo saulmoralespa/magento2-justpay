@@ -28,4 +28,5 @@
 "Secure key, unique value that identifies the commerce","Secure key, unique value that identifies the commerce",
 "Specify endpoint URL","Specify endpoint URL",
 "Click <a href="%1" target="_top">here</a> to continue shopping","Clic <a href="%1" target="_top">aquí</a> para seguir comprando",
-"The time allowed in minutes to generate transactions","The time allowed in minutes to generate transactions"
+"The time allowed in minutes to generate transactions","The time allowed in minutes to generate transactions",
+"Expiration time","Expiration time"
